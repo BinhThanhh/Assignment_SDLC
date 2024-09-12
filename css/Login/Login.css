@@ -1,0 +1,50 @@
+body{
+    background-image: url("Login/Floating_Abode.webp");
+}
+header{
+    background-color: rgb(0, 0, 0, 0.7);
+    background-size: 100%;
+    background-attachment: fixed;
+}
+.p1{
+    text-align: center;
+    display: inline;
+    font-size: 150%;
+}
+#login {
+    background-image: url("Login/login_img.png");
+    width: 900px;
+    height: 526px;
+}
+#iuser {
+    height: 37px;
+    width: 255px;
+    margin-top: 5%;
+    margin-bottom: 3%;
+}
+#ipass {
+    height: 37px;
+    width: 255px;
+    margin-bottom: 5%;   
+}
+#btlogin {
+    background-color: #d78c61;
+    height: 37px;
+    width: 255px;
+    margin-bottom: 2%;
+    margin-right: 9%;
+    margin-left: 9%;
+}
+#btlogin:hover {
+    background-color: #b66c42;
+}
+#bt_signup {
+    background-color: #f6c37e;
+    height: 37px;
+    width: 150px;
+    margin-left: 41%;
+    margin-bottom: -2%;
+}
+#bt_signup:hover {
+    background-color: #c5762f;
+}
