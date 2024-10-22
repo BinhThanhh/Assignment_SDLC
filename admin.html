@@ -13,110 +13,204 @@
     <title>Admin page</title>
 </head>
 
+<!-- js click prd-details to edit -->
+<script>
+    function edit() {
+        window.location.href = '#fckinggo';
+    };
+</script>
+
 <body>
     <!-- Header -->
     <header>
         <!-- navbar -->
-        <nav class="navbar bg-dark border-bottom border-body" data-bs-theme="dark">
-            <div class="container">
-                <div class="row">
-                    <div style="margin-top: -20px; margin-left: 40px;">
-                        <nav class="navbar">
-                            <!-- Logo -->
-                            <a class="navbar-brand" href="#">
-                                <img src="images/logo.png" alt="Kính mắt Zuki" width="100" height="auto">
-                            </a>
-                            <div style="margin-left: 160px;">
-                                <a id="item" href="#">Home</a>
-                            </div>
-                            <div style="margin-left: 60px;">
-                                <a id="item" href="#">Glasses frames</a>
-                            </div>
-                            <div style="margin-left: 60px;">
-                                <a id="item" href="#">Lenses</a>
-                            </div>
-                            <div style="margin-left: 60px;">
-                                <a id="item" href="#">Sunglasses</a>
-                            </div>
+        <div class="menu">
+            <nav class="navbar bg-dark border-bottom border-body" data-bs-theme="dark">
+                <div class="container">
+                    <div class="row">
+                        <div style="margin-top: -20px; margin-left: 40px;">
+                            <nav class="navbar">
+                                <!-- Logo -->
+                                <a class="navbar-brand" href="#">
+                                    <img src="images/logo.png" alt="Kính mắt Zuki" width="100" height="auto">
+                                </a>
+                                <div style="margin-left: 160px;">
+                                    <a id="item" href="#">Home</a>
+                                </div>
+                                <div style="margin-left: 60px;">
+                                    <a id="item" href="#">Glasses frames</a>
+                                </div>
+                                <div style="margin-left: 60px;">
+                                    <a id="item" href="#">Lenses</a>
+                                </div>
+                                <div style="margin-left: 60px;">
+                                    <a id="item" href="#">Sunglasses</a>
+                                </div>
 
-                            <!-- Search bar -->
-                            <div style="margin-left: 180px;">
-                                <nav class="navbar">
-                                    <form method="post" class="d-flex" role="search">
-                                        <button id="search" class="btn btn-outline-success" type="submit"><img src="images/UI_Icon_Search.png" alt=""></button>
-                                    </form>
-                                </nav>
-                            </div>
+                                <!-- Search bar -->
+                                <div style="margin-left: 180px;">
+                                    <nav class="navbar">
+                                        <form method="post" class="d-flex" role="search">
+                                            <button id="search" class="btn btn-outline-success" type="submit"><img
+                                                    src="images/UI_Icon_Search.png" alt=""></button>
+                                        </form>
+                                    </nav>
+                                </div>
 
-                            <!-- Login/Register -->
-                            <div style="margin-left: 40px;">
-                                <a id="login" href="#">Login/Register</a>
-                            </div>
-                            <input type="text" id="search_input" placeholder="Search..." style="display: none;">
-                        </nav>
+                                <!-- Login/Register -->
+                                <div style="margin-left: 40px;">
+                                    <a id="login" href="#">Login/Register</a>
+                                </div>
+                                <input type="text" id="search_input" placeholder="Search..." style="display: none;">
+                            </nav>
+                        </div>
+
                     </div>
-
                 </div>
-            </div>
-            <!-- js for search tab -->
-            <script>
-                const searchBtn = document.getElementById('search');
-                const searchInput = document.getElementById('search_input');
-            
-                searchBtn.addEventListener('mouseover',
-                    () => {
-                        searchInput.style.display = 'inline';
-                        searchInput.focus(); // Đặt tiêu điểm vào input
+                <!-- js for search tab -->
+                <script>
+                    const searchBtn = document.getElementById('search');
+                    const searchInput = document.getElementById('search_input');
+
+                    searchBtn.addEventListener('mouseover',
+                        () => {
+                            searchInput.style.display = 'inline';
+                            searchInput.focus();
+                        });
+
+                    searchBtn.addEventListener('mouseout', () => {
+                        searchInput.style.display = 'none';
                     });
-            
-                searchBtn.addEventListener('mouseout', () => {
-                    searchInput.style.display = 'none';
-                });
-            </script>            
-        </nav>
+                </script>
+            </nav>
+        </div>
     </header>
     <!-- Tabs of admin-->
     <div class="d-flex align-items-start">
         <div style="border-right: 2px solid rgb(100, 100, 100);">
-            <div id="tabs" class="nav flex-column nav-pills me-3" id="v-pills-tab" role="tablist" aria-orientation="vertical">
-              <button class="nav-link active" id="v-pills-home-tab" data-bs-toggle="pill" data-bs-target="#v-pills-home" type="button" role="tab" aria-controls="v-pills-home" aria-selected="true" aria-orientation="vertical">Home</button>
-              <button class="nav-link" id="v-pills-home-tab" data-bs-toggle="pill" data-bs-target="#v-pills-profile" type="button" role="tab" aria-controls="v-pills-profile" aria-selected="false" aria-orientation="vertical">Products</button>
-              <button class="nav-link" id="v-pills-home-tab" data-bs-toggle="pill" data-bs-target="#v-pills-disabled" type="button" role="tab" aria-controls="v-pills-disabled" aria-selected="false" aria-orientation="vertical">Orders</button>
+            <div id="tabs" class="nav flex-column nav-pills me-3" id="v-pills-tab" role="tablist"
+                aria-orientation="vertical">
+                <button class="nav-link active" id="v-pills-home-tab" data-bs-toggle="pill"
+                    data-bs-target="#v-pills-home" type="button" role="tab" aria-controls="v-pills-home"
+                    aria-selected="true" aria-orientation="vertical">Home</button>
+                <button class="nav-link" id="v-pills-home-tab" data-bs-toggle="pill" data-bs-target="#v-pills-profile"
+                    type="button" role="tab" aria-controls="v-pills-profile" aria-selected="false"
+                    aria-orientation="vertical">Products</button>
+                <button class="nav-link" id="v-pills-home-tab" data-bs-toggle="pill" data-bs-target="#v-pills-disabled"
+                    type="button" role="tab" aria-controls="v-pills-disabled" aria-selected="false"
+                    aria-orientation="vertical">Orders</button>
             </div>
         </div>
-
-        <!-- div of home -->
+        <!-- home -->
         <div class="tab-content" id="v-pills-tabContent">
-            <!-- productstemp view -->
-          <div style="margin-top: 3%; margin-left: 7%;" class="tab-pane fade show active" id="v-pills-home" role="tabpanel" aria-labelledby="v-pills-home-tab" tabindex="0">
-            <div class="card" style="width: 18rem;">
-                <img src="images/prd_img/Character_Eula.png" class="card-img-top" alt="...">
-                <div class="card-body">
-                  <h5 class="card-title">Card title</h5>
-                  <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+            <div style="margin-top: 3%; margin-left: 5%;" class="tab-pane fade show active" id="v-pills-home"
+                role="tabpanel" aria-labelledby="v-pills-home-tab" tabindex="0">
+                <div class="home-div">
+                    <div class="home-details">
+                        <img src="images/prd_img/Character_Eula.png">
+                        <h5>Eula</h5>
+                    </div>
+                    <div class="home-details">
+                        <img src="images/prd_img/Character_Eula.png">
+                        <h5>Tượng Chúa Kitô</h5>
+                    </div>
+                    <div class="home-details">
+                        <img src="images/prd_img/Character_Eula.png">
+                        <h5>Bạch Dinh</h5>
+                    </div>
+                    <div class="home-details">
+                        <img src="images/prd_img/Character_Eula.png">
+                        <h5>Bạch Dinh</h5>
+                    </div>
                 </div>
-              </div>
-          </div>
+            </div>
 
-          <!-- div of products -->
-          <div style="margin-top: 3%; margin-left: 7%;" class="tab-pane fade" id="v-pills-profile" role="tabpanel" aria-labelledby="v-pills-home-tab" tabindex="0">
-            <!-- product edit option -->
-            <div class="card" style="width: 18rem;">
-                <img src="images/prd_img/Character_Eula.png" class="card-img-top" alt="Eula">
-                <div class="card-body">
-                  <h5 class="card-title">Card title</h5>
-                  <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                  <a href="#" class="btn btn-primary">Edit</a>
+            <!-- product -->
+            <div style="margin-top: 3%; margin-left: 4%;" class="tab-pane fade" id="v-pills-profile" role="tabpanel"
+                aria-labelledby="v-pills-home-tab" tabindex="0">
+                <div class="prd-div">
+                    <div id="prd-details" onclick="edit()">
+                        <img src="images/prd_img/Character_Eula.png">
+                        <h5>Lmao</h5>
+                    </div>
+                    <div id="prd-details" onclick="edit()">
+                        <img src="images/prd_img/Character_Eula.png">
+                        <h5>Lmao</h5>
+                    </div>
+                    <div id="prd-details" onclick="edit()">
+                        <img src="images/prd_img/Character_Eula.png">
+                        <h5>Lmao</h5>
+                    </div>
+                    <div id="prd-details" onclick="edit()">
+                        <img src="images/prd_img/Character_Eula.png">
+                        <h5>Lmao</h5>
+                    </div>
+                    <div id="prd-details" onclick="edit()">
+                        <img src="images/prd_img/Character_Eula.png">
+                        <h5>Lmao</h5>
+                    </div>
+                    <div id="prd-details" onclick="edit()">
+                        <img src="images/prd_img/Character_Eula.png">
+                        <h5>Lmao</h5>
+                    </div>
+                    <div id="prd-details" onclick="edit()">
+                        <img src="images/prd_img/Character_Eula.png">
+                        <h5>Lmao</h5>
+                    </div>
+                    <div id="prd-details" onclick="edit()">
+                        <img src="images/prd_img/Character_Eula.png">
+                        <h5>Lmao</h5>
+                    </div>
+                    <div id="prd-details" onclick="edit()">
+                        <img src="images/prd_img/Character_Eula.png">
+                        <h5>Lmao</h5>
+                    </div>
+                    <div id="prd-details" onclick="edit()">
+                        <img src="images/prd_img/Character_Eula.png">
+                        <h5>Lmao</h5>
+                    </div>
+                    <div id="prd-details" onclick="edit()">
+                        <img src="images/prd_img/Character_Eula.png">
+                        <h5>Lmao</h5>
+                    </div>
+                    <div id="prd-details" onclick="edit()">
+                        <img src="images/prd_img/Character_Eula.png">
+                        <h5>Lmao</h5>
+                    </div>
+                    <div id="prd-details" onclick="edit()">
+                        <img src="images/prd_img/Character_Eula.png">
+                        <h5>Lmao</h5>
+                    </div>
+                    <div id="prd-details" onclick="edit()">
+                        <img src="images/prd_img/Character_Eula.png">
+                        <h5>Lmao</h5>
+                    </div>
+                    <div id="prd-details" onclick="edit()">
+                        <img src="images/prd_img/Character_Eula.png">
+                        <h5>Lmao</h5>
+                    </div>
+                    <div id="prd-details" onclick="edit()">
+                        <img src="images/prd_img/Character_Eula.png">
+                        <h5>Lmao</h5>
+                    </div>
+
                 </div>
-              </div>
-          </div>
-          <div style="margin-top: 3%;" class="tab-pane fade" id="v-pills-disabled" role="tabpanel" aria-labelledby="v-pills-disabled-tab" tabindex="0">
-
-          </div>
+            </div>
+            <!-- order -->
+            <div style="margin-top: 10%;" class="tab-pane fade" id="v-pills-disabled" role="tabpanel"
+                aria-labelledby="v-pills-disabled-tab" tabindex="0">
+                <div class="order-list">
+                    <div id="order" onclick="edit()">
+                        <img src="images/prd_img/Character_Eula.png">
+                        <h5>Lmao</h5>
+                    </div>
+                </div>
+            </div>
         </div>
-      </div>
+    </div>
 </body>
 
 <!-- include bootstrap.js -->
- <script src="js/bootstrap.js"></script>
+<script src="js/bootstrap.js"></script>
+
 </html>
