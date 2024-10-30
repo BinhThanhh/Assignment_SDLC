@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="css/hdandft/header.css">
+    <link rel="shortcut icon" href="images/ico.png">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="js/jquery.min.js"></script>
+    <title>Home - Gọng kính cận, kính thời trang</title>
+</head>
+
+<body>
+    <!-- Header -->
+    <header>
+        <!-- navbar -->
+        <div class="menu">
+            <nav class="navbar bg-dark border-bottom border-body" data-bs-theme="dark">
+                <div class="container">
+                    <div class="row">
+                        <div style="margin-top: -20px; margin-left: 40px;">
+                            <nav class="navbar">
+                                <!-- Logo -->
+                                <a class="navbar-brand" href="#">
+                                    <img src="images/logo.png" alt="Kính mắt Zuki" width="100" height="auto">
+                                </a>
+                                <div style="margin-left: 160px;">
+                                    <a id="item" href="main.html">Home</a>
+                                </div>
+                                <div style="margin-left: 60px;">
+                                    <a id="item" href="#">Glasses frames</a>
+                                </div>
+                                <div style="margin-left: 60px;">
+                                    <a id="item" href="#">Lenses</a>
+                                </div>
+                                <div style="margin-left: 60px;">
+                                    <a id="item" href="#">Sunglasses</a>
+                                </div>
+
+                                <!-- Search bar -->
+                                <div style="margin-left: 180px;">
+                                    <nav class="navbar">
+                                        <form method="post" class="d-flex" role="search">
+                                            <button id="search" class="btn btn-outline-success" type="submit"><img
+                                                    src="images/UI_Icon_Search.png" alt=""></button>
+                                        </form>
+                                    </nav>
+                                </div>
+
+                                <!-- Login/Register -->
+                                <div style="margin-left: 40px;">
+                                    <a id="login" href="#">Login/Register</a>
+                                </div>
+                                <input type="text" id="search_input" placeholder="Search..." style="display: none;">
+                            </nav>
+                        </div>
+
+                    </div>
+                </div>
+                <!-- js for search tab -->
+                <script>
+                    const searchBtn = document.getElementById('search');
+                    const searchInput = document.getElementById('search_input');
+
+                    searchBtn.addEventListener('mouseover',
+                        () => {
+                            searchInput.style.display = 'inline';
+                            searchInput.focus();
+                        });
+
+                    searchBtn.addEventListener('mouseout', () => {
+                        searchInput.style.display = 'none';
+                    });
+                </script>
+            </nav>
+        </div>
+    </header>
+    <section>
+        <div style="margin-left: 3%">
+            <div class="home-div">
+                <div class="prd-details">
+                    <img src="images/prd_img/Character_Eula.png">
+                    <h5>Bạch Dinh</h5>
+                </div>
+            </div>
+        </div>
+    </section>
+</body>
+<script src="js/bootstrap.js"></script>
+
+</html>
