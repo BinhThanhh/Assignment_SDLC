@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- css of this Webpage and bootstrap-->
+    <link rel="stylesheet" href="../css/bootstrap.css">
+    <link rel="stylesheet" href="../css/admin/edit_prd.css">
+    <!-- css of header -->
+    <link rel="stylesheet" href="../css/hdandft/header.css">
+    <link rel="shortcut icon" href="../../images/ico.png">
+    <title>Edit product page</title>
+</head>
+
+<body>
+    <!-- Header -->
+    <header>
+        <!-- navbar -->
+        <div class="menu">
+            <nav class="navbar bg-dark border-bottom border-body" data-bs-theme="dark">
+                <div class="container">
+                    <div class="row">
+                        <div style="margin-top: -20px; margin-left: 40px;">
+                            <nav class="navbar">
+                                <!-- Logo -->
+                                <a class="navbar-brand" href="#">
+                                    <img src="../images/logo.png" alt="Kính mắt Zuki" width="100" height="auto">
+                                </a>
+                                <div style="margin-left: 160px;">
+                                    <a id="item" href="../main.html">Home</a>
+                                </div>
+                                <div style="margin-left: 60px;">
+                                    <a id="item" href="#">Glasses frames</a>
+                                </div>
+                                <div style="margin-left: 60px;">
+                                    <a id="item" href="#">Lenses</a>
+                                </div>
+                                <div style="margin-left: 60px;">
+                                    <a id="item" href="#">Sunglasses</a>
+                                </div>
+
+                                <!-- Search bar -->
+                                <div style="margin-left: 180px;">
+                                    <nav class="navbar">
+                                        <form method="post" class="d-flex" role="search">
+                                            <button id="search" class="btn btn-outline-success" type="submit"><img
+                                                    src="../../images/UI_Icon_Search.png" alt=""></button>
+                                        </form>
+                                    </nav>
+                                </div>
+
+                                <!-- Login/Register -->
+                                <div style="margin-left: 40px;">
+                                    <a id="login" href="#">Login/Register</a>
+                                </div>
+                                <input type="text" id="search_input" placeholder="Search..." style="display: none;">
+                            </nav>
+                        </div>
+
+                    </div>
+                </div>
+                <!-- js for search tab -->
+                <script>
+                    const searchBtn = document.getElementById('search');
+                    const searchInput = document.getElementById('search_input');
+
+                    searchBtn.addEventListener('mouseover',
+                        () => {
+                            searchInput.style.display = 'inline';
+                            searchInput.focus();
+                        });
+
+                    searchBtn.addEventListener('mouseout', () => {
+                        searchInput.style.display = 'none';
+                    });
+                </script>
+            </nav>
+        </div>
+    </header>
+    <div style="margin-top:5%">
+        <div class="row">
+            <div class="col-lg-4">
+                <div id="prd_img">
+                    <h4 style="margin-left: 70%;">Ảnh sản phẩm</h4>
+                    <img src="../images/prd_img/Character_Eula.png" alt="">
+                </div>
+            </div>
+            <div class="col-lg-8">
+                <div class="product-info">
+                    <h2>Thông tin sản phẩm</h2>
+                    <form>
+                        <label for="name">Tên sản phẩm:</label>
+                        <input type="text" id="name" name="name" placeholder="Tên sản phẩm" value="" required>
+                        <label for="name">Category: </label>
+                        <select id="productType" name="productType">
+                            <option value="smartphone">Điện thoại thông minh</option>
+                            <option value="laptop">Laptop</option>
+                            <option value="tablet">Tablet</option>
+                        </select>
+                        <label for="price">Giá: (VNĐ)</label>
+                        <input type="number" id="price" name="price" value="" placeholder="Giá sản phẩm" required>
+                        <label for="file-upload">Chọn ảnh sản phẩm</label>
+                        <input type="file" id="file-upload" accept="image/*">
+                        <label for="description">Mô tả:</label>
+                        <textarea id="description" name="description" placeholder="Mô tả sản phẩm"></textarea>
+                        <button type="submit" class="btn btn-success">Lưu thay đổi</button>
+                    </form>
+                    <div style="margin-top: 1%;">
+                        <button type="submit" class="btn btn-danger">Xóa sản phẩm</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+<!-- include bootstrap.js -->
+<script src="../js/bootstrap.js"></script>
+
+</html>
