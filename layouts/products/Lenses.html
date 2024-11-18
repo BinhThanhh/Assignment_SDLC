@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="../../css/main.css">
+    <link rel="stylesheet" href="../../css/bootstrap.css">
+    <link rel="stylesheet" href="../../css/hdandft/header.css">
+    <link rel="stylesheet" href="../../css/hdandft/footer.css">
+    <link rel="shortcut icon" href="../../images/ico.png">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="js/jquery.min.js"></script>
+    <title>Home - Gọng kính cận, kính thời trang</title>
+</head>
+
+<body>
+    <!-- Header -->
+    <header>
+        <!-- navbar -->
+        <div class="menu">
+            <nav class="navbar bg-dark border-bottom border-body" data-bs-theme="dark">
+                <div class="container">
+                    <div class="row">
+                        <div style="margin-top: -20px; margin-left: 40px;">
+                            <nav class="navbar">
+                                <!-- Logo -->
+                                <a class="navbar-brand" href="#">
+                                    <img src="../../images/logo.png" alt="Kính mắt Zuki" width="100" height="auto">
+                                </a>
+                                <div style="margin-left: 160px;">
+                                    <a id="item" href="main.html">Home</a>
+                                </div>
+                                <div style="margin-left: 60px;">
+                                    <a id="item" href="/layouts/products/glasses_frames.html">Glasses frames</a>
+                                </div>
+                                <div style="margin-left: 60px;">
+                                    <a id="item" href="/layouts/products/Lenses.html">Lenses</a>
+                                </div>
+                                <div style="margin-left: 60px;">
+                                    <a id="item" href="/layouts/products/Sunglasses.html">Sunglasses</a>
+                                </div>
+
+                                <!-- Search bar -->
+                                <div style="margin-left: 180px;">
+                                    <nav class="navbar">
+                                        <form method="post" class="d-flex" role="search">
+                                            <button id="search" class="btn btn-outline-success" type="submit"><img
+                                                    src="../../images/UI_Icon_Search.png" alt=""></button>
+                                        </form>
+                                    </nav>
+                                </div>
+
+                                <!-- Login/Register -->
+                                <div style="margin-left: 40px;">
+                                    <a id="login" href="#">Login/Register</a>
+                                </div>
+                                <input type="text" id="search_input" placeholder="Search..." style="display: none;">
+                            </nav>
+                        </div>
+
+                    </div>
+                </div>
+                <!-- js for search tab -->
+                <script>
+                    const searchBtn = document.getElementById('search');
+                    const searchInput = document.getElementById('search_input');
+
+                    searchBtn.addEventListener('mouseover',
+                        () => {
+                            searchInput.style.display = 'inline';
+                            searchInput.focus();
+                        });
+
+                    searchBtn.addEventListener('mouseout', () => {
+                        searchInput.style.display = 'none';
+                    });
+                </script>
+            </nav>
+        </div>
+    </header>
+    <section>
+        <div style="margin-left: 2%; margin-top: 2%;">
+            <div class="home-div">
+                <div class="container-fluid">
+                    <div class="row">
+                        <div class="col-lg-3">
+                            <div class="prd-details">
+                                <img src="../../images/prd_img/Character_Eula.png">
+                                <h5>Eula</h5>
+                            </div>
+                        </div>                       
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <footer class="text-center text-lg-start bg-light text-muted footer">
+        <section class="d-flex justify-content-center justify-content-lg-between p-4 border-bottom"></section>
+        <section class="">
+            <div class="container text-center text-md-start mt-5">
+                <div class="row mt-3">
+                    <div class="col-md-3 col-lg-4 col-xl-3 mx-auto mb-4">
+                        <h6 class="text-uppercase fw-bold mb-4">
+                            Selling Zuki glasses
+                        </h6>
+                        <p>
+                            Specializing in selling glasses frames and lenses
+                        </p>
+                    </div>
+                    <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mb-4">
+                        <h6 class="text-uppercase fw-bold mb-4">
+                            Product
+                        </h6>
+                        <p>
+                            <a href="#!" class="text-reset">Glasses frames</a>
+                        </p>
+                        <p>
+                            <a href="#!" class="text-reset">Lenses</a>
+                        </p>
+                        <p>
+                            <a href="#!" class="text-reset">Sunglasses</a>
+                        </p>
+                    </div>
+                    <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mb-4">
+                        <h6 class="text-uppercase fw-bold mb-4">
+                            Useful links
+                        </h6>
+                        <p>
+                            <a href="#!" class="text-reset">FAQs</a>
+                        </p>
+                        <p>
+                            <a href="#!" class="text-reset">About us</a>
+                        </p>
+                    </div>
+                    <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-4">
+                        <h6 class="text-uppercase fw-bold mb-4">
+                            Contact
+                        </h6>
+                        <p><i class="fas fa-home me-3"> Da Ton, Gia Lam, Ha Noi, Viet Nam</i></p>
+                        <p><i class="fas fa-envelope me-3"> binh63261@gmail.com</i></p>
+                        <p><i class="fas fa-phone me-3"> +84 354497902</i></p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </footer>
+
+</body>
+<script src="js/bootstrap.js"></script>
+
+</html>

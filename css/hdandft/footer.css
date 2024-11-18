@@ -1,0 +1,21 @@
+/* html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+} */
+body {
+  min-height: 1vh;
+  display: flex;
+  flex-direction: column;
+  
+}
+section {
+  flex: 1;
+}
+
+footer {
+  position:-ms-page;
+  bottom: 1vh;
+  left: 0;
+  right: 0;
+}

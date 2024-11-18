@@ -1,0 +1,23 @@
+.product-info {
+    width: 50%;
+    margin: 0 auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+input, textarea, select {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+}
+
+#prd_img img{
+    width: 90%;
+    height: auto;
+    margin-left: 50%;
+}
